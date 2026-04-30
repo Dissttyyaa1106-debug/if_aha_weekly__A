@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: darkblue;
+}
+
+table {
+    margin: auto;
+    background-color: white;
+}
+
+td {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+}
