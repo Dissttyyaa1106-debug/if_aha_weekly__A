@@ -10,13 +10,13 @@
     <hr>
     <table border="1" cellspacing="0" cellpadding="15px">
         <tr>
-            <td> <a href="index.html">HOME</a>
+            <td> <a href="index.php">HOME</a>
             </td>
 
-            <td> <a href="profile.html">PROFILE</a>
+            <td> <a href="profile.php">PROFILE</a>
             </td>
 
-            <td> <a href="contact.html">CONTACT</a>
+            <td> <a href="contact.php">CONTACT</a>
             </td>
             <td>Data</td>
         </tr>
