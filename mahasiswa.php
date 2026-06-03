@@ -1,3 +1,53 @@
+<?php
+
+    $koneksi = mysqli_connect("localhost", "root", "", "ifahaweekly");
+
+    if($koneksi)
+    {
+        echo "Berhasil Konek";
+    }
+
+
+    $query = "SELECT * FROM mahasiswa";
+
+    $result = mysqli_query($koneksi, $query);
+
+    //// ambil data (fetch) mahasiswa dari lemari (result)
+
+
+    // ada 4 cara 
+    //-----------------------
+
+    //// mysqli_fetch_row
+    //// mysqli_fetch_assoc
+    //// mysqli_fetch_object
+    //// mysqli_fetch_array
+
+    $mhs = mysqli_fetch_row($result);
+
+    var_dump ($mhs)
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,36 +99,4 @@
             <td><a href="editdata.php"><button>EDIT</button></a> | <a href="deletedata.php"><button>DELETE</button></a></td>  
         </tr>
 
-    </table>
-        <h3>Latihan</h3>
-        <table border="1" cellspacing="0" cellpadding="5px">
-        <tr>
-            <th>1,1</th>
-            <th>1,2</th>
-            <th>1,3</th>
-            <th>1,4</th>
-        </tr>
-
-        <tr>
-            <th>2,1</th>
-            <th  colspan="2" align="center">?<th
-            <th>2,4</th>
-        </tr>
-
-        <tr>
-            <th>3,1</th>
-            <th>3,4</th>
-        </tr>
-
-        <tr>
-            <th>4,1</th>
-            <th>4,2</th>
-            <th>4,3</th>
-            <th>4,4</th>
-        </tr>
-    </table>
-
-
-
-</body>
-</html>
+    
