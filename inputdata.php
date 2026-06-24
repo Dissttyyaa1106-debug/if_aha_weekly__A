@@ -1,16 +1,48 @@
 <?php
-   
+   require 'fungsi.php'; 
+   /// variable super global namanya $_POST
+    if(isset($_POST["submit"]))
+    {
+         $nama = $_POST["nama"];
+         $nim = $_POST["nim"];
+         $jurusan = $_POST["jurusan"];
+         $email = $_POST["email"];
+         $nohp = $_POST["nohp"];
+         $foto = $_POST["foto"];
+    
+         $query = "INSERT INTO mahasiswa VALUES ('$nama', '$nim', '$jurusan', '$email', '$nohp', '$foto')";
+         mysqli_query($koneksi, $query);
+         if(mysqli_affected_rows($koneksi) > 0)
+         {
+             echo "
+                <script>
+                    alert('data berhasil ditambahkan');
+                    window.location.href = 'mahasiswa.php';
+                </script>
+             ";
+         }
+         else
+         {
+            echo "<script>
+                    alert('data gagal ditambahkan');
+                    window.location.href = 'mahasiswa.php';
+                </script>";
+         }
+    }
+
+    ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah data maahsiswa</title>
+    <title>Tambah data mahasiswa</title>
 </head>
 <body>
     <h2>Tambah data mahasiswa</h2>
-    <form action="mahasiswa.php" methods="post">
+    <form action="mahasiswa.php" methods="post" enctype="multipart/form-data">
         <table cellpadding="5px">
             <tr>
                 <td><label for="nama">Nama</label></td>
