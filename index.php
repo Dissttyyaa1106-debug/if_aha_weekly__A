@@ -11,22 +11,22 @@
     <hr>
     <table border="1" cellspacing="0" cellpadding="15px">
         <tr>
-            <td> <a href="index.php">Home</a>
+            <td> 
+                <a href="index.php">Home</a>
             </td>
-
-            <td> <a href="profile.php">Profile</a>
-            </td>
-
-            <td> <a href="contact.php">Contact</a>
-            </td>
-
-            <td> <a href="mahasiswa.php">data mahasiswa</a>
-            </td>
-        
+            <td><a href="profile.php">Profile</a></td>
+            <td><a href="contact.php">Contact</a></td>
+            <td><a href="mahasiswa.php">data mahasiswa</a></td>
+            <td><a href="login.php">login</a></td>
         </tr>
     </table>
+
     <h2>Sambutan Kaprodi</h2>
-    <img src="asset/images/jokowi.jpg" alt=" "Mantan Presiden"  width="200px" />
+
+    <img src="asset/images/jokowi.jpg"
+         alt="Kaprodi"
+         height="200px">
+
     <p>
         <b Nama : <i> Jokowi <br />
         Jabatan : <i> Presiden </b><br />

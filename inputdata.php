@@ -1,38 +1,27 @@
 <?php
    require 'fungsi.php'; 
-   /// variable super global namanya $_POST
-    if(isset($_POST["submit"]))
+   /// variable super global $_POST
+    if(isset($_POST["kirim"]))
     {
-         $nama = $_POST["nama"];
-         $nim = $_POST["nim"];
-         $jurusan = $_POST["jurusan"];
-         $email = $_POST["email"];
-         $nohp = $_POST["nohp"];
-         $foto = $_POST["foto"];
-    
-         $query = "INSERT INTO mahasiswa VALUES ('$nama', '$nim', '$jurusan', '$email', '$nohp', '$foto')";
-         mysqli_query($koneksi, $query);
-         if(mysqli_affected_rows($koneksi) > 0)
-         {
-             echo "
-                <script>
-                    alert('data berhasil ditambahkan');
+        if(inputdata($_POST, $_FILES["foto"]) > 0) //// query ok
+        {
+            echo "<script>
+                    alert('data berhasil ditambahkan!!');
                     window.location.href = 'mahasiswa.php';
                 </script>
-             ";
-         }
-         else
-         {
+        }
+        else
+        {
             echo "<script>
-                    alert('data gagal ditambahkan');
+                    alert('data gagal ditambahkan!!');
                     window.location.href = 'mahasiswa.php';
                 </script>";
-         }
+        }
     }
 
+
     ?>
-
-
+            
 <!DOCTYPE html>
 <html lang="en">
 <head>
